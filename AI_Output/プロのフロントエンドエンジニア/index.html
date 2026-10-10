@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじが引けるWebサイト</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>おみくじが引けるWebサイト</h1>
+        <button onclick="drawLucky()">おみくじを引く</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function drawLucky() {
+            const results = [
+                "大吉", "吉", "小吉", "末吉", "中吉", "凶", "大凶"
+            ];
+            const randomIndex = Math.floor(Math.random() * results.length);
+            document.getElementById('result').innerText = results[randomIndex];
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿```python
+import time
+from datetime import datetime
+
+class DigitalClock:
+    def __init__(self):
+        self.update_time()
+
+    def update_time(self):
+        self.current_time = datetime.now().strftime('%H:%M:%S')
+        self.print_time()
+
+    def print_time(self):
+        print(f"現在時刻: {self.current_time}")
+        self.timer = self.print_time if input("時計を更新しますか (y/n): ").lower() == 'y' else None
+        if self.timer:
+            self.timer()
+
+    def start(self):
+        self.timer = self.print_time
+        self.timer()
+
+if __name__ == "__main__":
+    clock = DigitalClock()
+    clock.start()
+```
+
+このコードは、ユーザーに現在の時刻を表示し、ユーザーが時刻を更新したい場合は更新するデジタル時計アプリを実装しています。ユーザーが `y` を入力した場合に時刻が更新され、再度確認されます。
