@@ -5,10 +5,10 @@ from tkinter import messagebox
 class EmergencyApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("フリマ画像一括リサイズツール開発")
+        self.root.title("フリマ画像一括リサイズツールの開発")
         self.root.geometry("600x520")
         
-        header = tk.Label(root, text="🚀 フリマ画像一括リサイズツール開発", font=("Meiryo", 15, "bold"), fg="#2563EB")
+        header = tk.Label(root, text="🚀 フリマ画像一括リサイズツールの開発", font=("Meiryo", 15, "bold"), fg="#2563EB")
         header.pack(pady=10)
         
         self.btn = tk.Button(root, text="✨ データを処理・生成する", font=("Meiryo", 12, "bold"), bg="#10B981", fg="white", command=self.run_process, padx=20, pady=10)
